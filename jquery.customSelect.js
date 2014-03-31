@@ -51,6 +51,9 @@
                     customSelectInnerSpan = $('<span />').addClass(getClass('Inner')),
                     customSelectSpan = $('<span />');
 
+                if ( $select.data('customSelect' )) return;
+                $select.data('customSelect', true);
+
                 $select.after(customSelectSpan.append(customSelectInnerSpan));
                 
                 customSelectSpan.addClass(prefix);
